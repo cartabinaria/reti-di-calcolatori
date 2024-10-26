@@ -10,6 +10,6 @@ on:
 jobs:
   deploy:
     name: Deploy
-    uses: csunibo/config/.github/workflows/statik.yml@main
+    uses: cartabinaria/config/.github/workflows/statik.yaml@main
     with:
       regex_include: "\\.(pdf|link|txt|py)$"
