@@ -8,4 +8,4 @@ on:
 jobs:
   filenames:
     name: Check filenames
-    uses: csunibo/config/.github/workflows/filenames.yml@main
+    uses: cartabinaria/config/.github/workflows/filenames.yaml@main
