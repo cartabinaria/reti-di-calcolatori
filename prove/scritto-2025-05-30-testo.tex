@@ -1,0 +1,222 @@
+\documentclass[a4paper, 12pt]{article}
+
+% --- PACCHETTI ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+\usepackage{ulem} % Per la sottolineatura \uline
+
+% --- IMPOSTAZIONI PAGINA ---
+\geometry{a4paper, top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{(\thepage)}
+\renewcommand{\headrulewidth}{0pt}
+
+% --- COMANDI PERSONALIZZATI ---
+\newcommand{\blankline}[1]{\uline{\hspace{#1}}}
+
+\begin{document}
+
+% --- INTESTAZIONE ---
+\begin{center}
+    \large\textbf{Prova Scritta del corso di Reti di Calcolatori (Computer Networks)} \\[5pt]
+    \normalsize\textbf{30 Maggio 2025} \\[5pt]
+    \normalsize\textbf{Docente: Luciano Bononi}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent \textbf{NOTA:} \textit{Questa è una copia scritta a mano dell'esame}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Nome e cognome (name and surname):} \blankline{7cm}
+
+\vspace{1cm}
+
+\noindent\fbox{\begin{minipage}{0.95\textwidth}
+\small
+Rispondere alle domande aperte scrivendo solo nello spazio consentito, o alle domande a scelta multipla barrando tutte e solo le risposte ritenute corrette (possono essere più di una). Fornire sempre una breve motivazione o il procedimento di calcolo della risposta, ove previsto. \\
+\textit{[Provide a written answer in the dedicated space only. For 'multiple answers' questions you must select all and only the correct answers, which may be more than one. Always supply a short motivation and computations in answers where you are told.]}
+\end{minipage}}
+
+\vspace{1.5cm}
+
+% --- INIZIO DOMANDE ---
+
+\begin{enumerate}
+    \item[1)[5]] Quali differenze esistono tra una topologia a stella e una topologia ad anello? \\
+    \textit{[Shortly explain the differences between star and ring topologies.]}
+    \vspace{4cm}
+
+    \item[2)[5]] Perché il ritardo di ricezione di pacchetti su Internet ha effetti sull'efficacia di utilizzo percentuale della rete? \\
+    \textit{[Why the delay for the reception of packets on Internet has effects on the percentage utilization of the network?]}
+    \vspace{4cm}
+    
+    \item[3)[5]] Come possono convivere e funzionare sistemi IPv4 e IPv6 su Internet? \\
+    \textit{[How IPv4 and IPv6 systems can co-exist and can be made compatible on the Internet?]}
+    \vspace{4cm}
+
+    \newpage
+
+    \item[4)[10]] Fornire un esempio efficiente di schema di comunicazione da Alice verso Bob del messaggio M molto grande, dando garanzie di non ripudiabilità e di non falsificazione (non serve confidenzialità). \\
+    \textit{[Provide an efficient scheme/example on how host Alice could sent to Bob a verifiable and non forgeable very big message M with replay attack countermeasures, and no confidentiality required.]}
+    
+    \vspace{4cm}
+    
+    \begin{center}
+        ALICE \quad $\xrightarrow{\hspace*{3cm}}$ \quad BOB
+    \end{center}
+
+    \vspace{1cm}
+    
+    \noindent NOTA: si presume che la chiave pubblica di Alice sia ottenuta via CA fidata.
+    \vspace{2cm}
+
+    \item[5)[5]] Perché si utilizza un Acknowledgment a livello MAC/LLC e poi di nuovo a livello Trasporto? Perché non bastano a livello Trasporto? \\
+    \textit{[Why Acknowledgments are used both at the MAC/LLC layer and at the Transport layer? Why Acks are not used only at the Transport layer?]}
+    \vspace{4cm}
+
+    \newpage
+    
+    \item[6)[5]] Spiegare il concetto di vulnerabilità del frame in protocolli MAC ad accesso casuale in reti senza fili. \\
+    \textit{[Shortly illustrate the concept of frame vulnerability in random-access wireless MAC protocols]}
+    
+    \vspace{4cm}
+
+    \item[7)[5]] Quali differenze ci sono tra Authoritative e Top-Level Domain DNS servers? \\
+    \textit{[Which differences exist between authoritative and Top Level Domain DNS servers?]}
+    \vspace{4cm}
+    
+    \item[8)[10]] Quale è il tempo totale minimo necessario per completare la trasmissione di due file da 100 Mbyte, a due destinatari diversi, da parte di un host su un segmento Ethernet con topologia a Bus centrale condiviso e con capacità di 100 Mb/s se il ritardo di propagazione massimo del segmento è di 1 microsecondo e i frame MAC hanno dimensione 1 Kbyte? E se la topologia fosse a stella con switch centrale (con buffer da 1 Gbyte)? Spiegare. \\
+    \textit{[What is the minimum total time required to complete the transmission of two 100 Mbyte files, to two different receivers, by a host on an Ethernet segment with a shared central bus topology and a capacity of 100 Mb/s, when the maximum propagation delay of the segment is 1 microsecond and the MAC frames are 1 Kbyte in size? What if the topology was star with central switch (buffered 1 Gbyte)? [explain]]}
+    \vspace{4cm}
+
+    \newpage
+
+    \item[9)[15]] Chi dovrebbe essere il router della rete che contiene l'host 112.80.187.11 se la maschera di rete è 255.255.240.0? A quale sottorete appartiene l'host 112.80.187.11? \\
+    \textit{[Which IPv4 host should be the router of the network containing the host 112.80.187.11 with netmask 255.255.240.0? Which subnetwork contains the host 112.80.187.11? Mostrare traccia dei calcoli (Show the computation).]}
+    
+    \vspace{2cm}
+    
+    \noindent IPv4 address of the Router of the Subnetwork: \blankline{8cm} \\
+    \noindent numero della sottorete dell'host [number of the subnetwork of host] 112.80.187.11: \blankline{3cm}
+    \vspace{2cm}
+    
+    \item[10)[10]] Se un sistema di trasmissione wireless trasmette una potenza IRPO (Intentional Radiator Power Output) pari a 20 mW, con un decadimento dovuto alla distanza pari a -110 dB tra trasmettitore e ricevitore, e il ricevitore dispone di receiver sensitivity come in tabella, quale guadagno dovranno avere le antenne trasmittente e ricevente per riuscire a sostenere una trasmissione almeno pari a 40 Mbps? \\
+    \textit{[A wireless transmission system transmits an IRPO (Intentional Radiator Power Output) power equal to 20 mW, with a decay due to the distance equal to -110 dB between transmitter and receiver. The receiver sensitivity levels are shown in the table. Which gain must be provided by the transmitting and receiving antennas to be able to sustain a transmission bitrate equal to at least 40 Mbps?]}
+    
+    \vspace{1cm}
+    
+    \begin{center}
+        \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Receiver Sensitivity (dBm)} & \textbf{Nominal Bitrate} \\
+            \hline
+            -96 dBm & 10 Mbps \\
+            -93 dBm & 20 Mbps \\
+            -87 dBm & 40 Mbps \\
+            -82 dBm & 80 Mbps \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \vspace{1cm}
+    
+    \noindent Guadagno antenna (antenna gain): \blankline{5cm}
+    
+    \vspace{5pt}
+    \noindent e se la distanza tra trasmittente e ricevente quadruplicasse? \textit{[and if the distance between Tx and Rx is quadruplicated?]}
+    
+    \vspace{1cm}
+    
+    \noindent Guadagno antenna con distanza 4x (antenna gain, 4x distance): \blankline{5cm}
+    \vspace{1cm}
+    
+    \newpage
+    
+    \item[11)[25]] Definire gli indirizzi IPv4 assegnabili nelle reti LOCALI sotto indicate per le esigenze definite: \\
+    \textit{[Define which IPv4 addresses can be assigned in the LOCAL networks below to satisfy the reqs. provided]} \\
+    \small{Usare retro del foglio per traccia procedimento e calcoli. \textit{[Mandatory: Use back of sheet for computation.]}}
+    
+    \vspace{1cm}
+
+    
+\begin{tikzpicture}[
+    node distance=1.5cm and 2cm,
+    router/.style={rectangle, rounded corners, draw=black, thick, minimum width=1.5cm, minimum height=0.8cm, fill=black!10, font=\footnotesize},
+    cloud/.style={ellipse, draw=black, thick, minimum width=2cm, minimum height=1cm, fill=black!05, font=\footnotesize},
+    subnet/.style={rectangle, draw=black, thick, minimum width=1.8cm, minimum height=0.8cm, fill=black!15, font=\footnotesize},
+    line/.style={draw, thick, -Stealth}
+]
+
+% Internet cloud
+\node[cloud] (internet) {Internet};
+
+% Main router (External router)
+\node[router, below=of internet] (ext_router) {Router\\Esterno N1};
+
+% Default Gateways
+\node[router, below left=of ext_router] (gw_n1) {Gateway\\N1};
+\node[router, below right=of ext_router] (gw_n2) {Gateway\\N2};
+
+% Routers N1 and N2
+\node[router, below=of gw_n1] (router_n1) {Router\\N1};
+\node[router, below=of gw_n2] (router_n2) {Router\\N2};
+
+% Additional router for N2A
+\node[router, right=of router_n2] (router_n2a) {Router\\N2A};
+
+% Subnets
+\node[subnet, below=of router_n1] (subnet_n1) {N1\\(42 host)};
+\node[subnet, below=of router_n2] (subnet_n2) {N2\\(99 host)};
+\node[subnet, below=of router_n2a] (subnet_n2a) {N2A\\(13 host)};
+
+% Connections
+\draw[line] (internet) -- (ext_router);
+\draw[line] (ext_router) -- (gw_n1);
+\draw[line] (ext_router) -- (gw_n2);
+\draw[line] (gw_n1) -- (router_n1);
+\draw[line] (gw_n2) -- (router_n2);
+\draw[line] (router_n2) -- (router_n2a);
+\draw[line] (router_n1) -- (subnet_n1);
+\draw[line] (router_n2) -- (subnet_n2);
+\draw[line] (router_n2a) -- (subnet_n2a);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+    
+    \begin{tabularx}{\textwidth}{@{}l@{\blankline{6cm}}}
+        Maschera di rete di N: \\
+        Primo host di N: \\
+        Ultimo host di N: \\
+        Router di N: \\
+        Broadcast di N: \\
+        \hline
+        Maschera di rete di N1: \\
+        Primo host di N1: \\
+        Ultimo host di N1: \\
+        Router di N1: \\
+        Broadcast di N1: \\
+        Def. gateway di N1: \\
+        \hline
+        Maschera di rete di N2A: \\
+        Primo host di N2A: \\
+        Ultimo host di N2A: \\
+        Router di N2A: \\
+        Broadcast di N2A: \\
+        Def. gateway di N2A: \\
+    \end{tabularx}
+\end{enumerate}
+
+\end{document}
